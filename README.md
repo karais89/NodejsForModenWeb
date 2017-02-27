@@ -221,3 +221,15 @@ Query String 모듈은 URL 객체의 쿼리와 관련된 모듈입니다.
 query string 모듈은 유용하지만 url 모듈에 기능이 통합되어 많이 사용되지 않는 것 같습니다.
 
 url.parse 메서드의 두번째 매개변수를 사용하면 querystring.parse와 같은 효과를 얻을 수 있습니다.
+
+### 4.4 util 모듈
+
+[https://nodejs.org/dist/latest-v6.x/docs/api/util.html](https://nodejs.org/dist/latest-v6.x/docs/api/util.html)
+
+util 모듈은 node.js의 보조적인 기능을 모아둔 모듈입니다.
+
+| 메서드 이름 | 설명 |
+|------------|------|
+| format(format[, ...args]) | 매개변수로 입력한 문자열을 조합해 리턴합니다. |
+
+format 메서드는 console.log와 비슷하지만 출력하지 않고 문자열을 반환합니다.
