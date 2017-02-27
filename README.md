@@ -161,3 +161,38 @@ Node.js는 모듈을 사용해 기능을 확장합니다.
 모듈은 기능을 쉽게 사용하고자 메서드와 속성을 미리 정의해 모아 놓은 것입니다.
 
 모듈을 생성할 때는 exports 객체를 사용합니다.
+
+## Chapter4. 기본 내장 모듈
+
+| 개념 | 설명 |
+|-----|------|
+| Node.js 문서 | Node.js의 주요 기능을 설명하는 문서입니다. https://nodejs.org/dist/latest-v버전숫자.x/docs/api/에 접속하면 가장 최신 버전의 문서를 확인할 수 있습니다. |
+| url 모듈 | 인터넷 주소를 다루는 데 사용합니다. |
+| Query String 모듈 | URL 객체의 쿼리를 다루는 데 사용합니다. |
+| util 모듈 | Node.js의 보조 기능을 모아두었습니다. |
+| crypto 모듈 | 해시 생성과 암호화를 수행합니다. |
+| File System 모듈 | 파일을 다루는 데 사용합니다. |
+
+Node.js 문서
+
+[https://nodejs.org/dist/latest-v6.x/docs/api/](https://nodejs.org/dist/latest-v6.x/docs/api/)
+
+### 4.1 os 모듈
+
+[https://nodejs.org/dist/latest-v6.x/docs/api/os.html](https://nodejs.org/dist/latest-v6.x/docs/api/os.html)
+
+os 모듈은 앱을 만들때 많이 활용되지는 않습니다.
+
+| 메서드 이름 | 설명 |
+|-----|------|
+| hostname() | 운영체제의 호스트 이름을 리턴합니다. |
+| type() | 운영체제의 이름을 리턴합니다. |
+| platform() | 운영체제의 플랫폼을 리턴합니다. |
+| arch() | 운영체제의 아키텍쳐를 리턴합니다. |
+| release() | 운영체제의 버전을 리턴합니다. |
+| uptime() | 운영체제가 실행된 시간을 리턴합니다. |
+| loadavg() | 로드 에버리지 정보를 담은 배열을 리턴합니다. |
+| totalmem() | 시스템의 총 메모리를 리턴합니다. |
+| freemem() | 시스템의 사용 가능한 메모리를 리턴합니다. |
+| cpus() | cpu의 정보를 담은 객체를 리턴합니다. |
+| networkInterfaces() | 네트워크 인터페이스의 정보를 담은 배열을 리턴합니다. |
