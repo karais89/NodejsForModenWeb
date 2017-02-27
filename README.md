@@ -196,3 +196,13 @@ os 모듈은 앱을 만들때 많이 활용되지는 않습니다.
 | freemem() | 시스템의 사용 가능한 메모리를 리턴합니다. |
 | cpus() | cpu의 정보를 담은 객체를 리턴합니다. |
 | networkInterfaces() | 네트워크 인터페이스의 정보를 담은 배열을 리턴합니다. |
+
+### 4.2 url 모듈
+
+[https://nodejs.org/dist/latest-v6.x/docs/api/url.html](https://nodejs.org/dist/latest-v6.x/docs/api/url.html)
+
+| 메서드 이름 | 설명 |
+|------------|------|
+| parse(urlStr[, parseQueryString=false<BR>[, slashesDenoteHost=false]]) | URL 문자열을 URL 객체로 변환해 리턴합니다. |
+| format(urlObj) | URL 객체를 URL 문자열로 변환해 리턴합니다. |
+| resolve(from, to) | 매개변수를 조합해 완전한 URL 문자열을 생성해 리턴합니다. |
