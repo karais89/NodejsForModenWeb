@@ -206,3 +206,18 @@ os 모듈은 앱을 만들때 많이 활용되지는 않습니다.
 | parse(urlStr[, parseQueryString=false<BR>[, slashesDenoteHost=false]]) | URL 문자열을 URL 객체로 변환해 리턴합니다. |
 | format(urlObj) | URL 객체를 URL 문자열로 변환해 리턴합니다. |
 | resolve(from, to) | 매개변수를 조합해 완전한 URL 문자열을 생성해 리턴합니다. |
+
+### 4.3 Query String 모듈
+
+[https://nodejs.org/dist/latest-v6.x/docs/api/querystring.html](https://nodejs.org/dist/latest-v6.x/docs/api/querystring.html)
+
+Query String 모듈은 URL 객체의 쿼리와 관련된 모듈입니다.
+
+| 메서드 이름 | 설명 |
+|------------|------|
+| stringify(obj[, sep[, eq[, options]]]) | 쿼리 객체를 쿼리 문자열로 변환해 리턴합니다. |
+| parse(str[, sep[, eq[, options]]]) | 쿼리 문자열을 쿼리 객체로 변환해 리턴합니다. |
+
+query string 모듈은 유용하지만 url 모듈에 기능이 통합되어 많이 사용되지 않는 것 같습니다.
+
+url.parse 메서드의 두번째 매개변수를 사용하면 querystring.parse와 같은 효과를 얻을 수 있습니다.
