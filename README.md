@@ -363,3 +363,20 @@ Node.js는 한 이벤트에 10개가 넘는 이벤트 리스너를 연결할 경
 | 메서드 이름 | 설명 |
 |-----|-------|
 | emit(eventName[, arg1][, arg2][, ...]) | 이벤트를 실행합니다. |
+
+### 5.5 이벤트 생성
+
+Node.js에서 이벤트를 연결할 수 있는 모든 객체는 EventEmitter 객체의 상속을 받습니다.
+
+process 객체도 EventEmitter 객체의 상속을 받기 때문에 이벤트를 연결할 수 있는 것입니다.
+
+아래는 EventEmitter 객체의 메서드입니다.
+
+| 메서드 이름 | 설명 |
+|-----|-------|
+| addListener(eventName, eventHandler) | 이벤트를 연결합니다. |
+| on(eventName, eventHandler) | 이벤트를 연결합니다. |
+| setMaxListeners(limit) | 이벤트 연결 개수를 조절합니다. |
+| removeListener(eventName, handler) | 특정 이벤트의 이벤트 리스너를 제거합니다. |
+| removeAllListener(eventName) | 모든 이벤트 리스너를 제거합니다. |
+| once(eventName, eventHandler) | 이벤트 리스너를 한 번만 연결합니다. |
