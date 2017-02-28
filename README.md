@@ -443,3 +443,14 @@ require('http').createServer(function (request, response) {
     response.end('<h1>Hello World .. !</h1>');
 }).listen(52273);
 ```
+
+### 6.3 response 객체
+
+클라이언트에 웹 페이지를 제공하려면 응답 메시지를 작성해야 합니다.
+
+응답 메시지를 작성할 때는 request 이벤트 리스너의 두 번째 매개변수로 전달되는 response 객체를 사용합니다.
+
+| 메서드 이름 | 설명 |
+|-----|-------|
+| writeHead(statusCode[, statusMessage][, headers]) | 응답 헤더를 작성합니다. |
+| end([data][, encoding][, callback]) | 응답 본문을 작성합니다. |
