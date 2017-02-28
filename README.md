@@ -262,3 +262,59 @@ crypto 모듈은 해시[^1] 생성과 암호화를 수행하는 모듈입니다.
 원래 비밀번호는 어떠한 장소에도 저장하지 않으므로 비밀번호를 해킹당해도 로그인할 수 없습니다.
 
 해커가 해시화된 암호를 직접 입력해도 해당 문자열을 다시 한번 해시화해서 비교하므로 로그인이 불가능 합니다.
+
+### 4.6 File System 모듈
+
+[https://nodejs.org/dist/latest-v6.x/docs/api/fs.html](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
+
+| 메서드 이름 | 설명 |
+|------------|------|
+| readFile(file, encoding, callback) | 파일을 비동기적으로 읽습니다. |
+| readFileSyhnc(file, encoding) | 파일을 동기적으로 읽습니다. |
+| writeFile(file, data, encoding, callback) | 파일을 비동기적으로 씁니다. |
+| writeFileSync(file, encoding) | 파일을 동기적으로 씁니다. |
+
+### 불 자료형 변환
+
+```
+console.log(Boolean(0));
+console.log(Boolean(NaN));
+console.log(Boolean(''));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+```
+
+위 5가지는 모드 false를 리턴합니다.
+
+단 console.log(Boolean('0'))과 console.log(Boolean('false'))는 빈 문자열이 아니므로 true를 출력합니다.
+
+### 조기 리턴
+
+오류 처리 부분을 오류만 출력하고 끝내는 간단한 코드로 구성한다면, 조기 리턴을 사용해서 코드를 깔끔하게 만들 수 있습니다.
+
+```
+// 모듈을 추출합니다.
+var fs = require('fs');
+
+// 파일을 읽습니다.
+fs.readFile('textfile.txt', 'utf8', function(error, data) {
+    if (error) { return console.log(error); }
+    
+    // 원하는 처리
+    console.log(data);    
+});
+
+// 파일을 씁니다.
+fs.writeFile('textfile.txt', 'Hello World .. !', function(error) {
+    if (error) { return console.log(error); }
+    
+    // 원하는 처리
+    console.log('FILE WRITE COMPLETE');
+});
+```
+
+이전의 코드와 다르게 오류가 발생하면 곧바로 리턴하게 만들었습니다.
+
+이를 조기 리턴이라고 부릅니다. 원하는 처리에 else 구문을 따로 사용할 필요가 없으므로 코드의 들여쓰기 단계가 줄어듭니다.
+
+Node.js로 프로그램을 만들 때는 코드의 들여쓰기가 굉장히 많아지므로, 하나라도 줄일 수 있다면 줄이는 것이 좋답니다.
